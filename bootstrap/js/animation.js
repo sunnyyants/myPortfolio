@@ -88,6 +88,7 @@ $(document).ready(function(){
             base += 610;
             if(cPos > base && charts.data('is-display') === false){
                 skillsChart();
+//
                 charts.data('is-display',true);
             }
             base += 650;
@@ -112,6 +113,7 @@ $(document).ready(function(){
                 interestChart.data('is-display',true);
             }
             drawCanvas();
+
         });
 
         var skillsChart = function(){
@@ -214,36 +216,37 @@ $(document).ready(function(){
             var jsCTX = $('#js').get(0).getContext("2d");
             var jsChart = new Chart(jsCTX).Radar(Jdata,options);
 
+
 //    Technologies and Software
-
-            var Odata = {
-                labels: ['MySQL','MongoDB','Wordpress','Photoshop','Bootstrap','Github','Vim','IntelliJ IDEA','WebStorm','Eclipse'],
-                datasets:[
-                    {
-                        labels:'Programming Language',
-                        fillColor: "rgba(192,224,228,0.5)",
-                        strokeColor: "rgba(220,220,220,1)",
-                        pointColor: "rgba(220,220,220,1)",
-                        pointStrokeColor: "#fff",
-                        pointHighlightFill: "#fff",
-                        pointHighlightStroke: "rgba(220,220,220,1)",
-                        data: [80,65,60,60,70,65,50,78,78,70]
-                    },
-                    {
-                        labels:'Base On',
-                        fillColor: "rgba(192,224,228,0)",
-                        strokeColor: "rgba(220,220,220,0)",
-                        pointColor: "rgba(220,220,220,0)",
-                        pointStrokeColor: "rgba(220,220,220,0)",
-                        pointHighlightFill: "rgba(220,220,220,0)",
-                        pointHighlightStroke: "rgba(220,220,220,0)",
-                        data: [100,100,100,100,100,100,100,100,100,100]
-                    }
-
-                ]
-            };
-            var oCTX = $('#otherTech').get(0).getContext("2d");
-            var oChart = new Chart(oCTX).Radar(Odata,options);
+//
+//            var Odata = {
+//                labels: ['MySQL','MongoDB','Wordpress','Photoshop','Bootstrap','Github','Vim','IntelliJ IDEA','WebStorm','Eclipse'],
+//                datasets:[
+//                    {
+//                        labels:'Programming Language',
+//                        fillColor: "rgba(192,224,228,0.5)",
+//                        strokeColor: "rgba(220,220,220,1)",
+//                        pointColor: "rgba(220,220,220,1)",
+//                        pointStrokeColor: "#fff",
+//                        pointHighlightFill: "#fff",
+//                        pointHighlightStroke: "rgba(220,220,220,1)",
+//                        data: [80,65,60,60,70,65,50,78,78,70]
+//                    },
+//                    {
+//                        labels:'Base On',
+//                        fillColor: "rgba(192,224,228,0)",
+//                        strokeColor: "rgba(220,220,220,0)",
+//                        pointColor: "rgba(220,220,220,0)",
+//                        pointStrokeColor: "rgba(220,220,220,0)",
+//                        pointHighlightFill: "rgba(220,220,220,0)",
+//                        pointHighlightStroke: "rgba(220,220,220,0)",
+//                        data: [100,100,100,100,100,100,100,100,100,100]
+//                    }
+//
+//                ]
+//            };
+//            var oCTX = $('#otherTech').get(0).getContext("2d");
+//            var oChart = new Chart(oCTX).Radar(Odata,options);
         };
 
         var iChart = function(){

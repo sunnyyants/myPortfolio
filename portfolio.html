@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">-->
     <link rel="stylesheet" href="bootstrap/css/timeline.css">
-    <link rel="stylesheet" href="bootstrap/css/portfolio.min.css">
+    <link rel="stylesheet" href="bootstrap/css/portfolio.css">
 </head>
 <body>
 <div id="loading" class="col-md-8 col-md-offset-2">
@@ -45,8 +45,59 @@
     <div class="col-md-10 col-md-offset-1">
         <h1 class="text-center" id="aboutmetitle">ABOUT ME</h1>
     </div>
-    <div class="col-md-12" id="avatar">
-        <img src="http://1.gravatar.com/avatar/3b0f76a7f23e1e58564adb7cb8e7840f?s=256&d=monsterid&r=G" class="img-circle img-responsive center-block" >
+    <div class="col-md-10 col-md-offset-1" id="avatar">
+        <div id="carousel-example-generic1" class="carousel slide col-md-4" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic1" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic1" data-slide-to="1"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="http://1.gravatar.com/avatar/3b0f76a7f23e1e58564adb7cb8e7840f?s=256&d=monsterid&r=G" class="img-circle img-responsive center-block">
+                </div>
+                <div class="item">
+                    <img src="http://1.gravatar.com/avatar/3b0f76a7f23e1e58564adb7cb8e7840f?s=256&d=monsterid&r=G" class="img-circle img-responsive center-block">
+                </div>
+
+            </div>
+        </div>
+        <div id="carousel-example-generic2" class="carousel slide col-md-4" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic2" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic2" data-slide-to="1"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="http://1.gravatar.com/avatar/3b0f76a7f23e1e58564adb7cb8e7840f?s=256&d=monsterid&r=G" class="img-circle img-responsive center-block">
+                </div>
+                <div class="item">
+                    <img src="http://1.gravatar.com/avatar/3b0f76a7f23e1e58564adb7cb8e7840f?s=256&d=monsterid&r=G" class="img-circle img-responsive center-block">
+                </div>
+            </div>
+        </div>
+        <div id="carousel-example-generic3" class="carousel slide col-md-4" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic3" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic3" data-slide-to="1"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="http://1.gravatar.com/avatar/3b0f76a7f23e1e58564adb7cb8e7840f?s=256&d=monsterid&r=G" class="img-circle img-responsive center-block">
+                </div>
+                <div class="item">
+                    <img src="http://1.gravatar.com/avatar/3b0f76a7f23e1e58564adb7cb8e7840f?s=256&d=monsterid&r=G" class="img-circle img-responsive center-block">
+                </div>
+            </div>
+        </div>
     </div>
     <div class="col-md-10 col-md-offset-1" id='info'>
         <div class="col-md-4">
@@ -197,23 +248,26 @@
         <h1 class="text-center">TECHNICAL SKILLS</h1>
     </div>
     <div class="col-md-12" data-is-display="false" id="charts">
-        <div class="col-md-3">
+        <div class="col-md-4">
             <canvas id="language" width="300" height="300" class="center-block"></canvas>
             <h3 class="text-center">Languages</h3>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-4">
             <canvas id="web" width="300" height="300" class="center-block"></canvas>
             <h3 class="text-center">Web Development</h3>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-4">
             <canvas id="js" width="300" height="300" class="center-block"></canvas>
             <h3 class="text-center">JavaScripts</h3>
         </div>
-        <div class="col-md-3">
-            <canvas id="otherTech" width="300" height="300" class="center-block" ></canvas>
-            <h3 class="text-center">Technologies & Software</h3>
-        </div>
+        <div class="col-md-12" id="technologies"></div>
+        <h3 class="text-center">Technologies & Tools & Software</h3>
+        <!--<div class="col-md-3">-->
+            <!--<canvas id="otherTech" width="300" height="300" class="center-block" ></canvas>-->
+            <!--<h3 class="text-center">Technologies & Software</h3>-->
+        <!--</div>-->
     </div>
+
 </div>
 <div class="container-fluid" id="projects">
     <div class="col-md-10 col-md-offset-1">
@@ -316,6 +370,8 @@
 <script src="bootstrap/js/bootstrap.min.js"></script>
 <script src="bootstrap/js/bootswatch.js"></script>
 <script src="bootstrap/js/Chart.js"></script>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="bootstrap/js/d3Chart.js"></script>
 <!--<script src="bootstrap/js/loadImage.js"></script>-->
 <script src="bootstrap/js/animation.js"></script>
 <iframe frameborder="0" scrolling="no" style="border: 0px; display: none; background-color: transparent;"></iframe><div id="GOOGLE_INPUT_CHEXT_FLAG" input="null" input_stat="{&quot;tlang&quot;:true,&quot;tsbc&quot;:true,&quot;pun&quot;:true,&quot;mk&quot;:false,&quot;ss&quot;:true}" style="display: none;"></div></body>

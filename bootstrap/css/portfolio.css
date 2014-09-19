@@ -161,7 +161,7 @@
 }
 
 #interest > div > h1 {
-    font-size: 100px;
+    font-size: 100%;
     margin-top: 100px;
     color: #FFFFFF;
 }
@@ -238,4 +238,31 @@ img:hover {
     font-size: 15px;
     color: #ffffff;
     text-align: center;
+}
+
+.bar {
+    fill: rgba(152, 223, 239, 0.56);
+    stroke: #4f5458
+}
+
+.bar:hover {
+    fill: rgba(239, 149, 128, 0.56);
+    stroke:#4f5458
+}
+
+.axis {
+    font: 13px sans-serif;
+    fill: #fff;
+}
+
+.axis path,
+
+.axis line {
+    fill: none;
+    stroke: #fff;
+    shape-rendering: crispEdges;
+}
+
+.x.axis path {
+    display: none;
 }
