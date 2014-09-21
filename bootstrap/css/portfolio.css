@@ -1,15 +1,43 @@
-#whoami {
-    background-image: url('http://www.landscapehdwalls.com/wallpapers/1/white-mountains-522-2560x1600.jpg');
-    background-size: 120%;
-    background-position: 7% 32%;
+@media(max-width: 894px){
+    #whoami {
+        background-image: url('http://www.landscapehdwalls.com/wallpapers/1/white-mountains-522-2560x1600.jpg');
+        background-size: 180%;
+        background-position: 36% 28%;
+    }
 }
+
+@media(max-width: 624px){
+    #whoami {
+        background-image: url('http://www.landscapehdwalls.com/wallpapers/1/white-mountains-522-2560x1600.jpg');
+        background-size: 300%;
+        background-position: 38% 30%;
+    }
+}
+
+@media(max-width: 320px){
+    #whoami {
+        background-image: url('http://www.landscapehdwalls.com/wallpapers/1/white-mountains-522-2560x1600.jpg');
+        background-size: 320%;
+        background-position: 38% 30%;
+    }
+}
+@media(min-width: 894px){
+    #whoami {
+        background-image: url('http://www.landscapehdwalls.com/wallpapers/1/white-mountains-522-2560x1600.jpg');
+        background-size: 120%;
+        background-position: 7% 32%;
+    }
+}
+
 
 #whoami > div > p {
     font-size: 25px;
     margin-top: 25px;
     font-weight: bold;
     color: rgba(38, 38, 38, 0.89)
+
 }
+
 #whoami > div > button {
         margin-bottom: 120px;
         margin-top: 180px;
@@ -20,6 +48,7 @@
     font-size: 100px;
     margin-top: 150px;
 }
+
 
 .content {
         margin-top:20px;
@@ -161,7 +190,7 @@
 }
 
 #interest > div > h1 {
-    font-size: 100%;
+    font-size: 100px;
     margin-top: 100px;
     color: #FFFFFF;
 }
@@ -183,7 +212,7 @@
     margin-bottom: 50px;
 }
 
-#inc > div > p {
+my-interests-info > div > p {
     font-size: 25px;
     color: #ffffff;
 }
@@ -234,7 +263,7 @@ img:hover {
     overflow: hidden;
 }
 
-#legend > div > p {
+my-interests-legends > div > p {
     font-size: 15px;
     color: #ffffff;
     text-align: center;
@@ -256,7 +285,6 @@ img:hover {
 }
 
 .axis path,
-
 .axis line {
     fill: none;
     stroke: #fff;
@@ -265,4 +293,44 @@ img:hover {
 
 .x.axis path {
     display: none;
+}
+
+@media(max-width: 584px){
+    #whoami > div > h1 {
+        color: rgba(38, 38, 38, 0.89);
+        font-size: 60px;
+        margin-top: 150px;
+    }
+    #aboutmetitle {
+        font-size: 60px;
+        margin-top: 100px;
+        margin-bottom: 600px;
+        color: #ffffff;
+    }
+    #timeline > div > h1 {
+        font-size: 60px;
+        margin-top: 100px;
+        margin-bottom: 50px;
+    }
+    #projects > div > h1 {
+        font-size: 60px;
+        margin-top: 100px;
+        margin-bottom: 500px;
+        color: #FFFFFF;
+    }
+    #skills > div > h1 {
+        font-size: 60px;
+        margin-top: 100px;
+        margin-bottom: 50px;
+        color: #FFFFFF;
+    }
+    #interest > div > h1 {
+        font-size: 60px;
+        margin-top: 100px;
+        color: #FFFFFF;
+    }
+    #blog > div > h1 {
+        font-size: 60px;
+        margin-top:100px
+    }
 }

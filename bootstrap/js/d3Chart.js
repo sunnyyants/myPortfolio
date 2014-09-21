@@ -2,13 +2,12 @@
  * Created by Sunny on 9/18/14.
  */
 $(function(){
-    var margin = {top: 20, right: 150, bottom: 30, left: 150},
-        width = $(window).width() - margin.left - margin.right,
+    var margin = {top: 20, right: 20, bottom: 80, left: 40},
+        width = $(window).width() * 0.8 - margin.left - margin.right,
         height = 400 - margin.top - margin.bottom;
 
-    var globalData;
     var x = d3.scale.ordinal()
-        .rangeRoundBands([0, width], .3);
+        .rangeRoundBands([0, width], .2);
 
     var y = d3.scale.linear()
         .range([height, 0]);
@@ -37,19 +36,25 @@ $(function(){
             return d.proficiency;
         })]);
 
+        console.log(xAxis);
         svg.append("g")
             .attr("class", "x axis")
             .attr("transform", "translate(0," + height + ")")
-            .call(xAxis);
+            .call(xAxis)
+            .selectAll("text")
+            .attr("y", 6)
+            .attr("x", 9)
+            .attr("dy", ".35em")
+            .attr("transform", "rotate(60)")
+            .style("text-anchor", "start");
 
         svg.append("g")
             .attr("class", "y axis")
             .call(yAxis)
             .append("text")
-            .attr("transform", "rotate(-90)")
-            .attr("y", 1)
-            .attr("dy", ".71em")
-            .style("text-anchor", "end")
+            .attr("x", 12)
+            .attr("dy", ".72em")
+            .style("text-anchor", "start")
             .text("Proficiency");
 
         svg.selectAll(".bar")
@@ -57,7 +62,6 @@ $(function(){
             .enter().append("rect")
             .attr("class", "bar")
             .attr("x", function (d) {
-                console.log( x(d.technology));
                 return x(d.technology);
             })
             .attr("width", x.rangeBand())
@@ -67,7 +71,6 @@ $(function(){
             .attr("height", function (d) {
                 return height - y(d.proficiency);
             });
-            console.log(x.rangeBand())
     });
 
     function type(d) {
@@ -75,18 +78,27 @@ $(function(){
         return d;
     }
     var resize = function(){
-        var width = $(window).width() - margin.left - margin.right;
-        console.log(width, height);
-        var x = d3.scale.ordinal()
-            .rangeRoundBands([0, width], .3);
+        var width = $(window).width() * 0.8 - margin.left - margin.right;
+
+        x = d3.scale.ordinal()
+            .rangeRoundBands([0, width], .2);
 
         svg.select('.x.axis')
-            .attr("transform", "translate(0," + height + ")")
-            .call(xAxis);
+            .attr("transform", "translate(" + 0 + ", " + height + ")")
+            .call(xAxis)
+            .selectAll("text")
+            .attr("y", 6)
+            .attr("x", 9)
+            .attr("dy", ".35em")
+            .attr("transform", "rotate(60)")
+            .style("text-anchor", "start");
+
 
         x.domain(globalData.map(function(d){
             return d.technology;
         }));
+
+        d3.select('svg').attr('width', width + margin.left + margin.right)
 
         svg.selectAll('rect')
             .attr("x", function (d) {
