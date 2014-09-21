@@ -76,7 +76,7 @@
     display: none;
 }
 
-#info > div > p {
+my-infos > div > p {
     font-size: 20px;
     color: #ffffff;
 }
