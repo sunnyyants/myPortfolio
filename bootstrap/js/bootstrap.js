@@ -834,7 +834,7 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap\'s JavaScript re
 
   var Modal = function (element, options) {
     this.options        = options
-    this.$body          = $(document.body)
+    this.$body          = $(document.contents)
     this.$element       = $(element)
     this.$backdrop      =
     this.isShown        = null
@@ -1023,7 +1023,7 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap\'s JavaScript re
   }
 
   Modal.prototype.checkScrollbar = function () {
-    if (document.body.clientWidth >= window.innerWidth) return
+    if (document.contents.clientWidth >= window.innerWidth) return
     this.scrollbarWidth = this.scrollbarWidth || this.measureScrollbar()
   }
 
@@ -1138,7 +1138,7 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap\'s JavaScript re
     html: false,
     container: false,
     viewport: {
-      selector: 'body',
+      selector: 'contents',
       padding: 0
     }
   }
@@ -1419,7 +1419,7 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap\'s JavaScript re
     var el     = $element[0]
     var isBody = el.tagName == 'BODY'
     return $.extend({}, (typeof el.getBoundingClientRect == 'function') ? el.getBoundingClientRect() : null, {
-      scroll: isBody ? document.documentElement.scrollTop || document.body.scrollTop : $element.scrollTop(),
+      scroll: isBody ? document.documentElement.scrollTop || document.contents.scrollTop : $element.scrollTop(),
       width:  isBody ? $(window).width()  : $element.outerWidth(),
       height: isBody ? $(window).height() : $element.outerHeight()
     }, isBody ? { top: 0, left: 0 } : $element.offset())
@@ -1688,8 +1688,8 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap\'s JavaScript re
   function ScrollSpy(element, options) {
     var process  = $.proxy(this.process, this)
 
-    this.$body          = $('body')
-    this.$scrollElement = $(element).is('body') ? $(window) : $(element)
+    this.$body          = $('contents')
+    this.$scrollElement = $(element).is('contents') ? $(window) : $(element)
     this.options        = $.extend({}, ScrollSpy.DEFAULTS, options)
     this.selector       = (this.options.target || '') + ' .nav li > a'
     this.offsets        = []

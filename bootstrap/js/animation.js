@@ -4,7 +4,7 @@
 
 $(document).ready(function(){
 
-    var $body = $('body');
+    var $body = $('contents');
     $body.animate({scrollTop:'0'});
     $body.on({
         'mousewheel': function(e) {
@@ -17,15 +17,15 @@ $(document).ready(function(){
         $('#loading').css('display','none');
         $('#all').removeClass('hideAll');
 
-        $('body').off('mousewheel');
+        $('contents').off('mousewheel');
 
         $('#rollback').on('click',function(e){
             e.preventDefault();
-            $('body').animate({scrollTop:'0'},1500);
+            $('contents').animate({scrollTop:'0'},1500);
         });
 
         $('#explore').on('click',function(){
-            $('body').animate({scrollTop:'500'},1000);
+            $('contents').animate({scrollTop:'500'},1000);
         });
 
         $(window).scroll(function(){

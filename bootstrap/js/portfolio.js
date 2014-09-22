@@ -219,5 +219,127 @@
                 '<div class="col-md-9"><h2 class="page-header">{{project.header}}!</h2>' +
                 '<p>{{project.description}}</p></div></div>'
         }
+    });
+
+    app.controller('myTimeLineController',['$scope',function($scope){
+        $scope.events=[
+            {
+                tlId:'tl1',
+                tlbId:'tl1b',
+                tlClass:"timeline-inverted",
+                icon:"glyphicon-globe",
+                badgeClass:"info",
+                title:'Web Developer Volunteer at The Sankofa Center',
+                timeAndPlace:'July 14, 2014 in Sunnyvale, CA',
+                isList:true,
+                contents:[
+                    "Implemented a web crawler using Python Scrapy and fetch retail partners' information from the old website, and finally transformed data into JSON.",
+                    "Designed an interactive and responsive partners' distribution map used D3.js, AJAX, and an open source customizable SVG map visualizations Javascript file called DataMaps.",
+                    "Built a CDN for websites through Google App Engine, and used Photoshop to optimize photos."
+                ]
+            },
+            {
+                tlId:'tl2',
+                tlbId:'tl2b',
+                tlClass:"timeline-inverted",
+                icon:"glyphicon-bookmark",
+                badgeClass:"success",
+                title:'Graduated from Northeastern University',
+                timeAndPlace:'May 2, 2014 in Boston, MA',
+                isList:false,
+                contents:"GPA: 3.50 / 4.00"
+            },
+            {
+                tlId:'tl3',
+                tlbId:'tl3b',
+                tlClass:"",
+                icon:"glyphicon-pencil",
+                badgeClass:"danger",
+                title:'Study in Northeastern University',
+                timeAndPlace:'September 6, 2012 in Boston, MA',
+                isList:false,
+                contents:"Pursing Master of Science degree at Electrical Computer Engineering"
+            },
+            {
+                tlId:'tl4',
+                tlbId:'tl4b',
+                tlClass:"timeline-inverted",
+                icon:"glyphicon-bookmark",
+                badgeClass:"success",
+                title:'Graduated from Zhuhai College of Jilin University',
+                timeAndPlace:'July 6, 2012 in Zhuhai, China',
+                isList:true,
+                contents:[
+                    "GPA: 3.76 / 4.00",
+                    "3 times scholarship",
+                    "Top rewards graduate"
+                ]
+            },
+            {
+                tlId:'tl5',
+                tlbId:'tl5b',
+                tlClass:"",
+                icon:"glyphicon-wrench",
+                badgeClass:"info",
+                title:"Associate Engineer at Women and Children's Hospital",
+                timeAndPlace:'January 3, 2012 in Guangzhou, China (3 months)',
+                isList:true,
+                contents:[
+                    "Maintained connections between databases and devices.",
+                    "Tested the network switches and built up the WLAN and LAN connections.",
+                    "Fixed computer malfunctions, including hard disks recovery, OS installation."
+                ]
+            },
+            {
+                tlId:'tl6',
+                tlbId:'tl6b',
+                tlClass:"",
+                icon:"glyphicon-edit",
+                badgeClass:"info",
+                title:'Teaching Assistant at Zhuhai College of Jilin University',
+                timeAndPlace:'February 2, 2011 in Zhuhai, China (5 months)',
+                isList:true,
+                contents:[
+                    "Teaching Assistant at Zhuhai College of Jilin University",
+                    "Prepared and maintained laboratory facilities before and after class.",
+                    "Guided the students to identify the difference of electrical components in lab."
+                ]
+            },
+            {
+                tlId:'tl7',
+                tlbId:'tl7b',
+                tlClass:"timeline-inverted",
+                icon:"glyphicon-pencil",
+                badgeClass:"danger",
+                title:'Study in Zhuhai College of Jilin University',
+                timeAndPlace:'September 1, 2008 in Zhuhai, China',
+                isList:false,
+                contents:"Pursing Bachelor degree of Science at Electrical Engineering"
+            },
+            {
+                tlId:'tl8',
+                tlbId:'tl8b',
+                tlClass:"",
+                icon:"glyphicon-user",
+                badgeClass:"",
+                title:'Born',
+                timeAndPlace:'April 20, 1990 in Canton, China',
+                isList:false,
+                contents:"Hello world!"
+            }
+        ]
+    }]);
+
+    app.directive('myTimeLine',function(){
+        return{
+            restrict:'A',
+            template:'<li ng-repeat="event in events" class="{{event.tlClass}}" >' +
+                '<div class="timeline-badge {{event.badgeClass}}" ng-attr-id="{{event.tlbId}}"><i class="glyphicon {{event.icon}}"></i></div>' +
+                '<div class="timeline-panel" ng-attr-id="{{event.tlId}}" >' +
+                '<div class="timeline-heading"><h4 class="timeline-title">{{event.title}}</h4>' +
+                '<p><small><i class="glyphicon glyphicon-time"></i>{{event.timeAndPlace}}</small></p></div>' +
+                '<div class="timeline-contents"><p ng-if="!event.isList">{{event.contents}}</p><ul ng-if="event.isList">' +
+                '<li ng-repeat="content in event.contents">{{content}}</li></ul></div></div></li>'
+        }
     })
 })();
