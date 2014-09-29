@@ -29,7 +29,7 @@
 }
 
 
-#whoami > div > p {
+#whoamiQuota {
     font-size: 25px;
     margin-top: 25px;
     font-weight: bold;
@@ -38,41 +38,34 @@
 }
 
 #whoami > div > button {
-        margin-bottom: 120px;
-        margin-top: 180px;
+    margin-bottom: 120px;
+    margin-top: 180px;
 }
 
-#whoami > div > h1 {
+#whoamiTitle {
     color: rgba(38, 38, 38, 0.89);
     font-size: 100px;
-    margin-top: 150px;
+    margin-top: 100px;
 }
 
 
 .content {
-        margin-top:20px;
+    margin-top:20px;
 }
 
 
-#aboutme {
-    background-color: #24ac7b;
-}
 
 #aboutmetitle {
     font-size: 100px;
-    margin-top: 100px;
-    margin-bottom: 600px;
+    margin-top: 60px;
+    margin-bottom: 25px;
     color: #ffffff;
 }
 
-#avatar {
-    display: none;
-}
 
 #info {
-    margin-bottom: 100px;
+    margin-bottom: 20px;
     margin-top: 50px;
-    display: none;
 }
 
 my-infos > div > p {
@@ -80,47 +73,7 @@ my-infos > div > p {
     color: #ffffff;
 }
 
-#timeline {
-    background-color: rgba(255, 173, 53, 0.90);
-    color: #3d3d3d;
-}
 
-#timeline > div > h1 {
-    font-size: 100px;
-    margin-top: 100px;
-    margin-bottom: 50px;
-}
-
-.timelineContent {
-    margin-bottom: 100px;
-    font-weight: bold;
-}
-
-#tl1, #tl2, #tl3, #tl4, #tl5, #tl6, #tl7, #tl8 {
-    display: none;
-}
-.timeline-body > ul {
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.timeline-body > p {
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.timeline-title {
-    font-weight: bold;
-}
-
-.timeline-title > p {
-    font-size: 16px;
-    font-weight: bold;
-}
-
-#skills {
-    background-color: rgba(50, 83, 165, 0.84);
-}
 
 #skills > div > h1 {
     font-size: 100px;
@@ -137,24 +90,19 @@ my-infos > div > p {
     color: #FFFFFF;
 }
 
-#projects {
-    background-color: #3daba9;
-}
 
 #projects > div > h1 {
     font-size: 100px;
     margin-top: 100px;
-    margin-bottom: 500px;
+    margin-bottom: 50px;
     color: #FFFFFF;
 }
 
 #pj1,#pj2 {
-    display: none;
     margin-bottom: 50px;
 }
 
 #pj3 {
-    display: none;
     margin-bottom: 100px;
 }
 
@@ -178,22 +126,18 @@ my-infos > div > p {
 }
 
 #pjp3 {
-     background-image: url('http://www.sunnyyants.com/wp-content/uploads/2013/09/Casino_Wallpaper_39-1024x640.jpg');
-     width: 240px;
-     height: 240px;
-     background-size: 200%;
+    background-image: url('http://www.sunnyyants.com/wp-content/uploads/2013/09/Casino_Wallpaper_39-1024x640.jpg');
+    width: 240px;
+    height: 240px;
+    background-size: 200%;
 }
 
-#interest {
-    background-color: rgba(228, 41, 36, 0.64);
-}
 
 #interest > div > h1 {
     font-size: 100px;
     margin-top: 100px;
     color: #FFFFFF;
 }
-
 
 
 #interest > div > div > i
@@ -216,9 +160,6 @@ my-interests-info > div > p {
     color: #ffffff;
 }
 
-#blog {
-    background-color: rgba(136, 31, 87, 0.65);
-}
 
 #blog > div > h1 {
     font-size: 100px;
@@ -234,19 +175,8 @@ my-interests-info > div > p {
     font-size: 23px;
 }
 
-#end {
-    background-color: #262626;
-}
 
-#end > div {
-    margin-top: 100px;
-    margin-bottom: 100px;
-}
 
-#end > div > h1 {
-    color: #FFE200;
-    font-size: 50px;
-}
 
 img:hover {
     opacity: 0.7;
@@ -303,7 +233,7 @@ my-interests-legends > div > p {
     #aboutmetitle {
         font-size: 60px;
         margin-top: 100px;
-        margin-bottom: 600px;
+        margin-bottom: 100px;
         color: #ffffff;
     }
     #timeline > div > h1 {
@@ -314,7 +244,7 @@ my-interests-legends > div > p {
     #projects > div > h1 {
         font-size: 60px;
         margin-top: 100px;
-        margin-bottom: 500px;
+        margin-bottom: 100px;
         color: #FFFFFF;
     }
     #skills > div > h1 {

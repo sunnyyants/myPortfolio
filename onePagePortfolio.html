@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/scrollJs/jquery.fullPage.css">
+    <link rel="stylesheet" href="bootstrap/css/onePage.css">
+</head>
+<body ng-app="onePageApp">
+<div id="fullPage">
+    <div class="section"  id="whoami">
+        <div class="container-fluid ">
+            <div class="col-md-10 col-md-offset-1">
+                <h1 class="text-center" id="whoamiTitle">Tingshen Yan</h1>
+                <p class="text-center" id="whoamiQuota">An Eager Young Mind</p>
+                <div class="col-md-4 col-md-offset-4 col-xs-12 col-sm-12 content" ng-controller="SocalMediaController">
+                    <my-socal-media></my-socal-media>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section" id="aboutme">
+        <div class="container-fluid"  ng-controller="aboutMeController">
+            <div class="col-md-10 col-md-offset-1">
+                <h1 class="text-center" id="aboutmetitle">ABOUT ME</h1>
+            </div>
+            <div class="col-md-10 col-md-offset-1" id="avatar">
+                <div id="carousel-example-generic" class="carousel slide col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4" data-ride="carousel" >
+                    <my-gallery></my-gallery>
+                </div>
+            </div>
+            <div class="col-md-10 col-md-offset-1" id='info'>
+                <my-infos></my-infos>
+            </div>
+        </div>
+    </div>
+    <div class="section" id="timline">
+        <iframe src='http://cdn.knightlab.com/libs/timeline/latest/embed/index.html?source=0Agl_Dv6iEbDadHdKcHlHcTB5bzhvbF9iTWwyMmJHdkE&font=Bevan-PotanoSans&maptype=toner&lang=en&height=650' width='100%' height='220%' frameborder='2'></iframe>
+    </div>
+    <div class="section" id="skillsets">
+        <div class="container-fluid"  id="skills">
+            <div class="col-md-10 col-md-offset-1">
+                <h1 class="text-center">TECHNICAL SKILLS</h1>
+            </div>
+            <div class="col-md-12" data-is-display="false" id="charts" ng-controller="SkillsetController">
+                <my-skill-set></my-skill-set>
+                <div class="col-md-10 col-md-offset-1" id="technologies"></div>
+                <h3 class="text-center">Technologies & Tools & Software</h3>
+                <div class="col-md-3">
+                    <canvas id="otherTech" width="300" height="300" class="center-block" ></canvas>
+                    <!--<h3 class="text-center">Technologies & Software</h3>-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="myProjects">
+        <div class="container-fluid" id="projects" ng-controller="myProjectController">
+            <div class="col-md-10 col-md-offset-1">
+                <h1 class="text-center" id="projectTitle">PROJECTS</h1>
+            </div>
+            <my-projects></my-projects>
+        </div>
+    </div>
+    <div class="section" id="myInterests">
+        <div class="container-fluid" id="interest"  ng-controller="myInterestsController">
+            <div class="col-md-10 col-md-offset-1">
+                <h1 class="text-center" >Interests</h1>
+            </div>
+            <div data-is-display="false" id="interestChart">
+                <canvas id="interests" width="350" height="350" class="center-block canvas"></canvas>
+            </div>
+            <div class="col-md-6 col-md-offset-3" id="legend" >
+                <my-interests-legends></my-interests-legends>
+            </div>
+            <div class="col-md-8 col-md-offset-2" id='inc' >
+                <my-interests-info></my-interests-info>
+            </div>
+        </div>
+    </div>
+    <div class="section" id="myBlog">
+        <div class="container-fluid" id="blog">
+            <div class="col-md-10 col-md-offset-1">
+                <h1 class="text-center">BLOG</h1>
+            </div>
+            <div class="col-md-6 col-md-offset-3" id='bc'>
+                <p class="text-center">Want to know more about me? Feel free to visit my blog!</p>
+                <div class="col-md-8 col-md-offset-2"><a href='http://www.sunnyyants.com' class="btn btn-lg btn-primary center-block">Go and check it out!</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.1/angular.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="bootstrap/scrollJs/jquery.fullPage.min.js"></script>
+<script src="bootstrap/scrollJs/vendors/jquery.easings.min.js"></script>
+<script src="bootstrap/scrollJs/vendors/jquery.slimscroll.min.js"></script>
+<script src="bootstrap/js/Chart.js"></script>
+<script src="bootstrap/js/onepage.js"></script>
+<script src="bootstrap/js/fullpage.js"></script>
+</body>
+</html>
